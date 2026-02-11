@@ -1,0 +1,9 @@
+name: "Test Dummy Action"
+description: "My first custom GitHub Action"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Print message
+      run: echo "Hello! This is my custom GitHub Action 🚀"
+      shell: bash
