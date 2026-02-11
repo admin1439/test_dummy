@@ -24,8 +24,10 @@ runs:
     - name: Upload files to cPanel
       run: |
         lftp -c "
+        set ssl:verify-certificate no;
+        set ftp:ssl-allow yes;
         open -u ${{ inputs.username }},${{ inputs.password }} ${{ inputs.server }};
-        mirror -R . /dummy/;
+        mirror -R . /public_html/;
         bye
         "
       shell: bash
