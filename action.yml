@@ -27,7 +27,7 @@ runs:
         set ssl:verify-certificate no;
         set ftp:ssl-allow yes;
         open -u ${{ inputs.username }},${{ inputs.password }} ${{ inputs.server }};
-        mirror -R . /public_html/;
+        mirror -R . /;
         bye
         "
       shell: bash
