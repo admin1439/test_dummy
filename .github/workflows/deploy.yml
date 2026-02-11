@@ -6,18 +6,16 @@ on:
       - main
 
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1.0.0
-        with:
-          fetch-depth: 2
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: FTP-Deploy-Action
+      - name: Deploy using my custom action
         uses: admin1439/test_dummy@main
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
