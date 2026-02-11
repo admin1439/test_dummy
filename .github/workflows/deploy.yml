@@ -9,13 +9,28 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    # ✅ Stop the job if it runs more than 3 minutes
+    timeout-minutes: 3
+
     steps:
+      # Step 1: Checkout latest code
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Deploy using my custom action
-        uses: admin1439/test_dummy@main
+      # Step 2: Deploy via FTP
+      - name: Deploy to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+
+          server-dir: /public_html/
+
+          exclude: |
+            **/.git*
+            **/.github*
+            **/__pycache__/*
+            **/node_modules/*
+            **/venv/*
+            **/*.log
