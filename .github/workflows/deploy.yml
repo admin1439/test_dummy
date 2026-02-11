@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # ✅ Job will stop automatically after 3 minutes
-    timeout-minutes: 3
+    timeout-minutes: 4
 
     steps:
       - name: Checkout Repository
