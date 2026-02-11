@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 2
 
       - name: FTP-Deploy-Action
-        uses: admin1439/test_dummy@2.331.0
+        uses: admin1439/test_dummy@main
         with:
           ftp-server: ${{ secrets.FTP_SERVER }}
           ftp-username: ${{ secrets.FTP_USERNAME }}
