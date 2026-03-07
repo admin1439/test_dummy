@@ -1,0 +1,196 @@
+/* ===============================
+   GLOBAL
+================================ */
+
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f3f5f7;
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.header {
+    height: 70px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.auth-buttons button {
+    padding: 8px 18px;
+    margin-left: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+/* ===============================
+   HERO
+================================ */
+
+.hero {
+    text-align: center;
+    margin-top: 120px;
+}
+
+/* ===============================
+   MODAL BACKGROUND
+================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===============================
+   AUTH CONTAINER
+================================ */
+
+.auth-container {
+    width: 900px;
+    height: 480px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* ===============================
+   LEFT PANEL
+================================ */
+
+.auth-left {
+    width: 40%;
+    background: #1fa463;
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-left h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.auth-left p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.auth-left button {
+    width: 140px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: white;
+    color: #1fa463;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ===============================
+   RIGHT PANEL
+================================ */
+
+.auth-right {
+    width: 60%;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-right h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* ===============================
+   INPUTS
+================================ */
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #d0d5da;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1fa463;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+
+#signInBtn {
+    width: 120px;
+    padding: 10px;
+    background: #1fa463;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#signInBtn:hover {
+    background: #188a53;
+}
+#signupSubmitBtn {
+    width: 120px;
+    padding: 10px;
+    background: #1fa463;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#signupSubmitBtn:hover {
+    background: #188a53;
+}
+
+/* ===============================
+   LINKS
+================================ */
+
+.link {
+    margin-top: 15px;
+    color: #1fa463;
+    cursor: pointer;
+    font-weight: 500;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #333;
+}
